@@ -1,0 +1,63 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: purple;
+    color: whitesmoke;
+}
+
+header{
+    text-align: center;
+}
+
+h1 {
+    font-weight: bold;
+    background-color: rgb(60, 199, 32);
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 70%;
+    border: solid 1px rgb(60, 199, 32);
+    border-radius: 500px;
+    text-align: center;
+    padding: 10px;
+}
+
+h2 {
+    font-weight: bold;
+    background-color: blue;
+    margin-left: 20%;
+    margin-right: 20%;
+    width: 60%;
+    border: solid 1px blue;
+    border-radius: 500px;
+    text-align: center;
+    padding: 10px;
+}
+
+#dstStart {
+    float:left;
+    background-color: white;
+    border: solid 2px gold;
+    border-radius: 20px;
+    color: black;
+    margin-top: 20px;
+    margin-left:5%;
+    margin-right:5%;
+    width: 40%;
+    padding:10px;
+}
+
+#dstEnd {
+    float:left;
+    background-color: white;
+    border: solid 2px gold;
+    border-radius: 20px;
+    color: black;
+    margin-top: 20px;
+    margin-left:5%;
+    margin-right:5%;
+    width: 40%;
+    padding:10px;
+}
+
+p {
+    text-align: center;
+}
