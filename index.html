@@ -1,25 +1,49 @@
 <!DOCTYPE html>
 <html lang="en-us">
-    <head>
-        <title>Daylight Savings Tool</title>
-        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="dstStyle.css">
-    </head>
-    <body>
-        <br>
-        <h1>Today is [JS Generated Date]</h1>
-        <h2>Daylight Savings is [not] in effect.</h2>
-        <section id="dstStart">
-            <h3>Daylight savings ends on...</h3>
-            <br>
-            <p>JavaScript Generated End Date</p>
-        </section>
-        <section id="dstEnd">
-            <h3>Daylight savings ends on...</h3>
-            <br>
-            <p>JavaScript Generated End Date</p>
-        </section>
-    </body>
+
+<head>
+    <title>Daylight Savings Tool</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="dstStyle.css">
+    <script src="dstScript.js"></script>
+</head>
+<body onload="currentDate();currentDstStatus();dstStartDate();dstEndDate()">
+    <br>
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <h1>Today is <span id="currentDate"></span></h1>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <h2>Daylight Savings <span id="currentDstStatus"></span> in effect.</h2>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5" id="dstStart">
+                <h3>Daylight savings Starts on...</h3>
+                <br>
+                <p id="dstStartDay"></p>
+                <p id="dstStartDateMonth"></p>
+                <p id="dstStartYear"></p>
+            </div>
+            <div class="col-md-2"></div>
+            <div class="col-md-5" id="dstEnd">
+                <h3>Daylight savings ends on...</h3>
+                <br>
+                <p id="dstEndDay"></p>
+                <p id="dstEndDateMonth"></p>
+                <p id="dstEndYear"></p>
+            </div>
+        </div>
+    </div>
+</body>
+
 </html>
