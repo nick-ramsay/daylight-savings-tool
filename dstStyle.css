@@ -40,19 +40,19 @@ h3 {
 }
 
 #dstStart {
-    background-color: white;
     border: solid 2px gold;
     border-radius: 20px;
     color: black;
+    background-color: #FFB2AE;
     margin-top: 20px;
     padding:10px;
 }
 
 #dstEnd {
-    background-color: white;
     border: solid 2px gold;
     border-radius: 20px;
     color: black;
+    background-color: #98fb98;
     margin-top: 20px;
     padding:10px;
 }
