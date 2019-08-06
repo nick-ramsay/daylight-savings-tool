@@ -11,31 +11,34 @@
 </head>
 <body onload="currentDate();currentDstStatus();dstStartDate();dstEndDate()">
     <br>
-    <div class="row">
-        <div class="col-md-1"></div>
-        <div class="col-md-10">
-            <h1>Today is <span id="currentDate"></span></h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <h1>Today is <span id="currentDate"></span></h1>
+            </div>
+            <div class="col-md-1"></div>
         </div>
-        <div class="col-md-1"></div>
-    </div>
-    <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-8">
-            <h2>Daylight Savings <span id="currentDstStatus"></span> in effect.</h2>
-        </div>
-        <div class="col-md-2"></div>
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-md-5" id="dstStart">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <h2>Daylight Savings <span id="currentDstStatus"></span> in effect.</h2>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6" id="dstStart">
                 <h3>Daylight savings ends on...</h3>
                 <br>
                 <p id="dstStartDay"></p>
                 <p id="dstStartDateMonth"></p>
                 <p id="dstStartYear"></p>
             </div>
-            <div class="col-md-2"></div>
-            <div class="col-md-5" id="dstEnd">
+            <div class="col-md-6" id="dstEnd">
                 <h3>Daylight savings starts on...</h3>
                 <br>
                 <p id="dstEndDay"></p>
