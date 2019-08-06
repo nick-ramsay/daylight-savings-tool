@@ -41,10 +41,14 @@ function dstStartDate() {
     var startMonth = monthNames[dstStartDt.getMonth()];
     var startYear = dstStartDt.getFullYear();
     
+    var currentDate = new Date();
+    var pastStartDt = (dstStartDt < currentDate) ? "ended":"ends";
+    
     document.getElementById('dstStartDay').innerHTML = startDay
     document.getElementById('dstStartDate').innerHTML = startDate
     document.getElementById('dstStartMonth').innerHTML = startMonth
     document.getElementById('dstStartYear').innerHTML = startYear
+    document.getElementById('dstStartPast').innerHTML = pastStartDt
 }
 
 function dstEndDate() {
