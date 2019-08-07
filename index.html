@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="dstStyle.css">
     <script src="dstScript.js"></script>
 </head>
-<body onload="currentDate();currentDstStatus();dstStartDate();dstEndDate()">
+<body onload="currentDate();currentDstStatus();dstEndDate();dstStartDate()">
     <br>
     <div class="container">
         <div class="row">
@@ -29,21 +29,21 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
+                <div class="m-1" id="dstEnd">
+                    <h3>Daylight savings <span id="dstEndPast"></span> on...</h3>
+                    <p id="dstEndDay"></p>
+                    <p id="dstEndDate" style="font-size: 60px"></p>
+                    <p id="dstEndMonth"></p>
+                    <p id="dstEndYear"></p>
+                </div>
+            </div>
+            <div class="col-md-6">
                 <div class="m-1" id="dstStart">
                     <h3>Daylight savings <span id="dstStartPast"></span> on...</h3>
                     <p id="dstStartDay"></p>
                     <p id="dstStartDate" style="font-size: 60px"></p>
                     <p id="dstStartMonth"></p>
                     <p id="dstStartYear"></p>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="m-1" id="dstEnd">
-                    <h3>Daylight savings starts on...</h3>
-                    <p id="dstEndDay"></p>
-                    <p id="dstEndDate" style="font-size: 60px"></p>
-                    <p id="dstEndMonth"></p>
-                    <p id="dstEndYear"></p>
                 </div>
             </div>
         </div>

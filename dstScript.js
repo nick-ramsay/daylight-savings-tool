@@ -34,7 +34,7 @@ function currentDstStatus() {
 function dstStartDate() {
     var dstStartDt = new Date();
         dstStartDt.setFullYear(dstStartDt.getFullYear());
-        dstStartDt.setMonth(3);
+        dstStartDt.setMonth(9);
         dstStartDt.setDate(1);
     var dstStartDtDOW = dstStartDt.getDay();
     var dstStartActualDate = (dstStartDtDOW > 0) ? (8 - dstStartDtDOW) : 1;
@@ -48,7 +48,7 @@ function dstStartDate() {
     var startYear = dstStartDt.getFullYear();
     
     var currentDate = new Date();
-    var pastStartDt = (dstStartDt < currentDate) ? "ended":"ends";
+    var pastStartDt = (dstStartDt < currentDate) ? "started":"starts";
     
     document.getElementById('dstStartDay').innerHTML = startDay
     document.getElementById('dstStartDate').innerHTML = startDate
@@ -59,8 +59,8 @@ function dstStartDate() {
 
 function dstEndDate() {
     var dstEndDt = new Date();
-    dstEndDt.setFullYear(2019);
-    dstEndDt.setMonth(9);
+    dstEndDt.setFullYear(dstEndDt.getFullYear());
+    dstEndDt.setMonth(3);
     dstEndDt.setDate(1);
     var dstEndDtDOW = dstEndDt.getDay();
     var dstEndActualDate = (dstEndDtDOW > 0) ? (8 - dstEndDtDOW) : 1;
@@ -72,9 +72,13 @@ function dstEndDate() {
     var endDate = dstEndDt.getDate();
     var endMonth = monthNames[dstEndDt.getMonth()];
     var endYear = dstEndDt.getFullYear();
+
+    var currentDate = new Date();
+    var pastEndDt = (dstEndDt < currentDate) ? "ended":"ends";
    
     document.getElementById('dstEndDay').innerHTML = endDay
     document.getElementById('dstEndDate').innerHTML = endDate
     document.getElementById('dstEndMonth').innerHTML = endMonth
     document.getElementById('dstEndYear').innerHTML = endYear
+    document.getElementById('dstEndPast').innerHTML = pastEndDt
 }
