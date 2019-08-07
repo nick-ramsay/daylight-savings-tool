@@ -2,14 +2,15 @@
 <html lang="en-us">
 
 <head>
-    <title>Daylight Savings Tool</title>
+    <title>Australia Daylight Savings Calculator</title>
     <meta name="viewport" content="width-device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="dstStyle.css">
+    <link rel="stylesheet" href="assets/dstStyle.css">
     <script src="dstScript.js"></script>
 </head>
+
 <body onload="currentDate();currentDstStatus();dstEndDate();dstStartDate()">
     <br>
     <div class="container">
@@ -22,7 +23,18 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h2 id="currentDstContainer">Daylight Savings <span id="currentDstStatus"></span> in effect.</h2>
+                <h2 id="currentDstContainer">Daylight savings <span id="currentDstStatus"></span> currently in effect.</h2>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 m-1" align="center">
+                <input type="number" id="yearInput" style="font-weight: bold; border:2px black solid; border-radius: 500px; text-align:center;">
+            <!--</div>
+            <div class="col-md-6 m-0" align="center">-->
+                <button type="button" class="btn btn-primary" onclick="dstEndDate();dstStartDate()">Run</button>
+                <button type="button" class="btn btn-warning" onclick="window.location.reload();">Reset</button>
             </div>
         </div>
     </div>

@@ -6,7 +6,9 @@ function currentDate() {
     var currentDay = dayNames[current.getDay()];
     var currentDate = current.getDate();
     var currentYear = current.getFullYear();
+
     document.getElementById('currentDate').innerHTML = currentDay + ", " + currentDate + " " + currentMonth + " " + currentYear
+    document.getElementById('yearInput').defaultValue = currentYear
 }
 
 function currentDstStatus() {
@@ -22,18 +24,20 @@ function currentDstStatus() {
     var first_sunday_october = (dst_month == 9 && first_sunday) ? true : false; //Month is October and first Sunday has passed
 
     var dst = (dst_full_months == "true") || ((!first_sunday_april) && (first_sunday_october)) ? "is" : "is not"; //If months are November through March OR it is before first Sunday of April and after first Sunday of October
+    
     document.getElementById('currentDstStatus').innerHTML = dst
+    
     if(dst === "is not") {
-        document.getElementById("currentDstContainer").style.backgroundColor="#ff6961";
+        document.getElementById('currentDstContainer').style.backgroundColor="#ff6961";
     }
     else {
-        document.getElementById("currentDstContainer").style.backgroundColor="#77dd77";
+        document.getElementById('currentDstContainer').style.backgroundColor="#77dd77";
     }
 }
 
 function dstStartDate() {
     var dstStartDt = new Date();
-        dstStartDt.setFullYear(dstStartDt.getFullYear());
+        dstStartDt.setFullYear(document.getElementById('yearInput').value);
         dstStartDt.setMonth(9);
         dstStartDt.setDate(1);
     var dstStartDtDOW = dstStartDt.getDay();
@@ -59,7 +63,7 @@ function dstStartDate() {
 
 function dstEndDate() {
     var dstEndDt = new Date();
-    dstEndDt.setFullYear(dstEndDt.getFullYear());
+    dstEndDt.setFullYear(document.getElementById('yearInput').value);
     dstEndDt.setMonth(3);
     dstEndDt.setDate(1);
     var dstEndDtDOW = dstEndDt.getDay();
