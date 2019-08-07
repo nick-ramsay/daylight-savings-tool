@@ -24,10 +24,10 @@ function currentDstStatus() {
     var dst = (dst_full_months == "true") || ((!first_sunday_april) && (first_sunday_october)) ? "is" : "is not"; //If months are November through March OR it is before first Sunday of April and after first Sunday of October
     document.getElementById('currentDstStatus').innerHTML = dst
     if(dst === "is not") {
-        document.getElementById("currentDstContainer").style.backgroundColor="red";
+        document.getElementById("currentDstContainer").style.backgroundColor="#ff6961";
     }
     else {
-        document.getElementById("currentDstContainer").style.backgroundColor="green";
+        document.getElementById("currentDstContainer").style.backgroundColor="#77dd77";
     }
 }
 
