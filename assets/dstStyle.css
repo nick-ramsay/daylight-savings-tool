@@ -41,7 +41,7 @@ h3 {
 #dstStart {
     border-radius: 20px;
     color: white;
-    background-color: red;
+    background-color: #62bb46;
     margin-top: 20px;
     padding:10px;
 }
@@ -49,7 +49,7 @@ h3 {
 #dstEnd {
     border-radius: 20px;
     color: white;
-    background-color: #62bb46;
+    background-color: red;
     margin-top: 20px;
     padding:10px;
 }
